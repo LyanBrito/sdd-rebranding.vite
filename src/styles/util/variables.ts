@@ -11,6 +11,7 @@ export const Colors = {
 export const Fonts ={
     logoFF: "\"Tac One\", sans-serif",
     primalFF: "\"Syne\", sans-serif",
+    carouselFF: "\"Notable\", sans-serif",
     sizeTN: "14px",
     sizeSM: "18px",
     sizeBASE: "20px",
