@@ -1,5 +1,4 @@
-
-const SDDLogo = () => (
+export const SDDLogo = () => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
         width={82}
@@ -16,4 +15,34 @@ const SDDLogo = () => (
         />
     </svg>
 )
-export default SDDLogo
+export const GlobeIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" width={18} height={18} fill="none">
+        <g
+            stroke="#000"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={1.5}
+            clipPath="url(#a)"
+        >
+            <path d="M9 16.5a7.5 7.5 0 1 0 0-15 7.5 7.5 0 0 0 0 15ZM1.5 9h15"/>
+            <path
+                d="M9 1.5A11.475 11.475 0 0 1 12 9a11.475 11.475 0 0 1-3 7.5A11.475 11.475 0 0 1 6 9a11.475 11.475 0 0 1 3-7.5v0Z"/>
+        </g>
+        <defs>
+            <clipPath id="a">
+                <path fill="#fff" d="M0 0h18v18H0z"/>
+            </clipPath>
+        </defs>
+    </svg>
+)
+export const ArrowIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" width={16} height={16} fill="none">
+        <path
+            stroke="#000"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="m4 6.667 2.586 2.586a2 2 0 0 0 2.828 0L12 6.667"
+        />
+    </svg>
+)
