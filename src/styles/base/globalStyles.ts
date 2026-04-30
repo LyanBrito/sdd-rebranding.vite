@@ -8,6 +8,8 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
         margin: 0;
         padding: 0;
+        transition: all 0.15s linear;
+    //    transição temporária para desenvolvimento
     }
 
     html {
