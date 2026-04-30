@@ -7,11 +7,9 @@ type NavBarProps = {
 export default function NavBar({ page }: NavBarProps) {
     return (
         <NavConatiner className="nav-bar">
-            {page === "/"}
-            <NavLink href="">Inicio</NavLink>
-            <NavLink href="">Produtos</NavLink>
-            <NavLink href="">Serviços</NavLink>
-            <NavLink href="">Contatos</NavLink>
+            <NavLink actualPage={page === "/"} href="/">Inicio</NavLink>
+            <NavLink actualPage={page === "/PortfolioPage"} href="/PortfolioPage">Portfolio</NavLink>
+            <NavLink actualPage={page === "/ContactsPage"} href="/ContactsPage">Contatos</NavLink>
         </NavConatiner>
     )
 }
