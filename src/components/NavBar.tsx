@@ -1,15 +1,21 @@
-import {NavConatiner, NavLink} from "./styles.ts";
+import * as S from "./styles.ts";
 
 type NavBarProps = {
     page: string;
 }
 
-export default function NavBar({ page }: NavBarProps) {
+export default function NavBar({page}: NavBarProps) {
     return (
-        <NavConatiner className="nav-bar">
-            <NavLink actualPage={page === "/"} href="/">Inicio</NavLink>
-            <NavLink actualPage={page === "/PortfolioPage"} href="/PortfolioPage">Portfolio</NavLink>
-            <NavLink actualPage={page === "/ContactsPage"} href="/ContactsPage">Contatos</NavLink>
-        </NavConatiner>
+        <S.NavContainer>
+            <S.NavLink
+                actualPage={page === "/"}
+                href="/">Inicio</S.NavLink>
+            <S.NavLink
+                actualPage={page === "/PortfolioPage"}
+                href="/PortfolioPage">Portfolio</S.NavLink>
+            <S.NavLink
+                actualPage={page === "/ContactsPage"}
+                href="/ContactsPage">Contatos</S.NavLink>
+        </S.NavContainer>
     )
 }
