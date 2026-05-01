@@ -1,5 +1,5 @@
-import {createGlobalStyle} from "styled-components";
-import {Fonts} from "../util/variables";
+import styled, {createGlobalStyle} from "styled-components";
+import {Colors, Fonts} from "../util/variables";
 
 export const GlobalStyle = createGlobalStyle`
     *,
@@ -88,4 +88,49 @@ export const GlobalStyle = createGlobalStyle`
     h6 {
         overflow-wrap: break-word;
     }
+`
+
+// App
+export const PageContainer = styled.div`
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+`
+
+export const HeroContent = styled.section`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-top: 4px solid ${Colors.purple};
+    background: ${Colors.purple};
+    border-top: 4px solid ${Colors.black};
+`
+export const ContentWrapper = styled.div`
+    display: flex;
+    width: 100%;
+    max-width: 46.484375%;
+    padding: 60px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    flex: 1 0 0;
+`
+export const HeroTitle = styled.h1`
+    color: ${Colors.white};
+    font-family: ${Fonts.primalFF};
+    font-size: ${Fonts.size3XL};
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.64px;
+    width: 100%;
+`
+
+export const ButtonWrapper = styled.div`
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
 `
