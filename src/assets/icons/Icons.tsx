@@ -1,3 +1,5 @@
+import type {SVGProps} from "react"
+
 export const SDDLogo = () => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -35,8 +37,10 @@ export const GlobeIcon = () => (
         </defs>
     </svg>
 )
-export const ArrowIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" width={16} height={16} fill="none">
+export const ArrowIcon = (props: SVGProps<SVGSVGElement>) => (
+    <svg xmlns="http://www.w3.org/2000/svg" width={16} height={16} fill="none"
+         {...props}
+    >
         <path
             stroke="#000"
             strokeLinecap="round"
@@ -44,5 +48,219 @@ export const ArrowIcon = () => (
             strokeWidth={2}
             d="m4 6.667 2.586 2.586a2 2 0 0 0 2.828 0L12 6.667"
         />
+    </svg>
+)
+export const PlaceholderPreview = (props: SVGProps<SVGSVGElement>) => (
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width={565}
+        height={585}
+        fill="none"
+        {...props}
+    >
+        <path fill="#FFC700" d="M0 0h565v585H0z"/>
+        <g filter="url(#a)">
+            <g clipPath="url(#b)">
+                <rect
+                    width={480}
+                    height={344.348}
+                    x={52}
+                    y={65.267}
+                    fill="#fff"
+                    rx={29.015}
+                />
+                <path fill="#000" d="M52 65.267h476v26H52z"/>
+            </g>
+            <rect
+                width={475.855}
+                height={340.203}
+                x={54.072}
+                y={67.339}
+                stroke="#000"
+                strokeWidth={4.145}
+                rx={26.943}
+            />
+        </g>
+        <g filter="url(#c)">
+            <g clipPath="url(#d)">
+                <rect width={193} height={367} x={33} y={152.733} fill="#fff" rx={28}/>
+                <path
+                    fill="#000"
+                    d="M77 152.733h106v9c0 7.732-6.268 14-14 14H91c-7.732 0-14-6.268-14-14v-9Z"
+                />
+                <path stroke="#000" d="M33 494.233h193"/>
+                <rect width={91} height={3} x={84} y={505.733} fill="#000" rx={1.5}/>
+            </g>
+            <rect
+                width={189}
+                height={363}
+                x={35}
+                y={154.733}
+                stroke="#000"
+                strokeWidth={4}
+                rx={26}
+            />
+        </g>
+        <defs>
+            <clipPath id="b">
+                <rect
+                    width={480}
+                    height={344.348}
+                    x={52}
+                    y={65.267}
+                    fill="#fff"
+                    rx={29.015}
+                />
+            </clipPath>
+            <clipPath id="d">
+                <rect width={193} height={367} x={33} y={152.733} fill="#fff" rx={28}/>
+            </clipPath>
+            <filter
+                id="a"
+                width={485.181}
+                height={349.529}
+                x={52}
+                y={65.267}
+                colorInterpolationFilters="sRGB"
+                filterUnits="userSpaceOnUse"
+            >
+                <feFlood floodOpacity={0} result="BackgroundImageFix"/>
+                <feColorMatrix
+                    in="SourceAlpha"
+                    result="hardAlpha"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                />
+                <feOffset dx={1.036} dy={1.036}/>
+                <feComposite in2="hardAlpha" operator="out"/>
+                <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0"/>
+                <feBlend in2="BackgroundImageFix" result="effect1_dropShadow_80_1594"/>
+                <feColorMatrix
+                    in="SourceAlpha"
+                    result="hardAlpha"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                />
+                <feOffset dx={2.073} dy={2.073}/>
+                <feComposite in2="hardAlpha" operator="out"/>
+                <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0"/>
+                <feBlend
+                    in2="effect1_dropShadow_80_1594"
+                    result="effect2_dropShadow_80_1594"
+                />
+                <feColorMatrix
+                    in="SourceAlpha"
+                    result="hardAlpha"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                />
+                <feOffset dx={3.109} dy={3.109}/>
+                <feComposite in2="hardAlpha" operator="out"/>
+                <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0"/>
+                <feBlend
+                    in2="effect2_dropShadow_80_1594"
+                    result="effect3_dropShadow_80_1594"
+                />
+                <feColorMatrix
+                    in="SourceAlpha"
+                    result="hardAlpha"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                />
+                <feOffset dx={4.145} dy={4.145}/>
+                <feComposite in2="hardAlpha" operator="out"/>
+                <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0"/>
+                <feBlend
+                    in2="effect3_dropShadow_80_1594"
+                    result="effect4_dropShadow_80_1594"
+                />
+                <feColorMatrix
+                    in="SourceAlpha"
+                    result="hardAlpha"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                />
+                <feOffset dx={5.181} dy={5.181}/>
+                <feComposite in2="hardAlpha" operator="out"/>
+                <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0"/>
+                <feBlend
+                    in2="effect4_dropShadow_80_1594"
+                    result="effect5_dropShadow_80_1594"
+                />
+                <feBlend
+                    in="SourceGraphic"
+                    in2="effect5_dropShadow_80_1594"
+                    result="shape"
+                />
+            </filter>
+            <filter
+                id="c"
+                width={198}
+                height={372}
+                x={33}
+                y={152.733}
+                colorInterpolationFilters="sRGB"
+                filterUnits="userSpaceOnUse"
+            >
+                <feFlood floodOpacity={0} result="BackgroundImageFix"/>
+                <feColorMatrix
+                    in="SourceAlpha"
+                    result="hardAlpha"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                />
+                <feOffset dx={1} dy={1}/>
+                <feComposite in2="hardAlpha" operator="out"/>
+                <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0"/>
+                <feBlend in2="BackgroundImageFix" result="effect1_dropShadow_80_1594"/>
+                <feColorMatrix
+                    in="SourceAlpha"
+                    result="hardAlpha"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                />
+                <feOffset dx={2} dy={2}/>
+                <feComposite in2="hardAlpha" operator="out"/>
+                <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0"/>
+                <feBlend
+                    in2="effect1_dropShadow_80_1594"
+                    result="effect2_dropShadow_80_1594"
+                />
+                <feColorMatrix
+                    in="SourceAlpha"
+                    result="hardAlpha"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                />
+                <feOffset dx={3} dy={3}/>
+                <feComposite in2="hardAlpha" operator="out"/>
+                <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0"/>
+                <feBlend
+                    in2="effect2_dropShadow_80_1594"
+                    result="effect3_dropShadow_80_1594"
+                />
+                <feColorMatrix
+                    in="SourceAlpha"
+                    result="hardAlpha"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                />
+                <feOffset dx={4} dy={4}/>
+                <feComposite in2="hardAlpha" operator="out"/>
+                <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0"/>
+                <feBlend
+                    in2="effect3_dropShadow_80_1594"
+                    result="effect4_dropShadow_80_1594"
+                />
+                <feColorMatrix
+                    in="SourceAlpha"
+                    result="hardAlpha"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                />
+                <feOffset dx={5} dy={5}/>
+                <feComposite in2="hardAlpha" operator="out"/>
+                <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0"/>
+                <feBlend
+                    in2="effect4_dropShadow_80_1594"
+                    result="effect5_dropShadow_80_1594"
+                />
+                <feBlend
+                    in="SourceGraphic"
+                    in2="effect5_dropShadow_80_1594"
+                    result="shape"
+                />
+            </filter>
+        </defs>
     </svg>
 )
