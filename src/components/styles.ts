@@ -2,6 +2,34 @@ import styled from "styled-components";
 import {Colors, Fonts} from "../styles/util/variables.ts";
 import {motion} from "motion/react";
 
+// Button
+interface ButtonProps {
+    isPrimal?: boolean;
+}
+
+export const ButtonContainer = styled(motion.a).attrs<ButtonProps>(() => ({
+    whileHover: {
+        scale: 1.04,
+        boxShadow: "3px 3px 0 0 #FFC700, 3px 3px 0 2px #000, 7px 7px 0 0 #74247A, 7px 7px 0 2px #000",
+    }
+}))<ButtonProps>`
+    display: flex;
+    width: fit-content;
+    padding: 14px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border-radius: 14px;
+    background: ${({isPrimal}) => isPrimal ? Colors.black : Colors.white};
+    color: ${({isPrimal}) => isPrimal ? Colors.white : Colors.black};
+    border: ${({isPrimal}) => isPrimal ? null : '2px solid'+ Colors.black};
+    font-family: ${Fonts.primalFF};
+    font-size: ${Fonts.sizeSM}
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+`
+
 // Navbar
 interface NavProps {
     actualPage?: boolean;
@@ -67,14 +95,19 @@ export const LangOptionsWrapper = styled.div`
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    background-color: ${Colors.white};
+    border: 4px solid ${Colors.black};
+    padding: 8px 12px;
     gap: 8px;
     width: 147px;
     right: 60px;
-    top: 10%;
+    top: 64px;
 `
 
 export const LangOptions = styled(motion.p).attrs({
-    whileHover: {scale: 1.08}
+    whileHover: {
+        scale: 1.15,
+    }
 })`
     color: ${Colors.black};
     font-family: ${Fonts.primalFF};
