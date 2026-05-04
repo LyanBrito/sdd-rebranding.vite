@@ -124,3 +124,109 @@ export const LangOptions = styled(motion.p).attrs({
         font-size: ${Fonts.sizeLG};
     }
 `
+
+// ProjectsSection
+
+interface SectionProps {
+    isProject?: boolean;
+}
+
+export const SectionContainer = styled.section<SectionProps>`
+    display: flex;
+    padding: 60px;
+    justify-content: center;
+    align-items: ${props => props.isProject ? "flex-start" : "center"};
+    gap: 40px;
+    width: 100%;
+    position: sticky;
+    top: 70px;
+`;
+export const ContentWrapper = styled.div<SectionProps>`
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+    background: ${Colors.yellow};
+    // height: ${props => props.isProject ? "100%" : "100%"};
+`
+
+export const ProjectTitle = styled.h4`
+    color: ${Colors.purple};
+    font-family: ${Fonts.primalFF};
+    font-size: ${Fonts.sizeXL};
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+`
+
+export const ProjectDescription = styled.p`
+    color: ${Colors.purple};
+    font-family: ${Fonts.primalFF};
+    font-size: ${Fonts.sizeLG};
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 100%;
+    max-width: 776px;
+`
+
+// Card
+
+export const CardContainer = styled.div`
+    display: flex;
+    width: 344px;
+    padding: 25px 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 30px;
+    border-radius: 24px;
+    border: 3px solid ${Colors.purple};
+    background: ${Colors.yellow};
+    box-shadow: 4px 4px 0 0 ${Colors.purple};
+`
+
+export const CardTitle = styled.h6`
+    color: ${Colors.purple};
+    font-family: ${Fonts.primalFF};
+    font-size: ${Fonts.sizeLG};
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: -30px;
+    width: 100%;
+`
+
+export const CardNum = styled.span`
+    color: ${Colors.purple};
+    font-family: ${Fonts.primalFF};
+    font-size: ${Fonts.sizeSM};
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 100%;
+`
+
+export const CardImage = styled.img`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex: 1 0 0;
+    align-self: stretch;
+    border-radius: 22px;
+    border: 3px solid ${Colors.purple};
+    object-fit: cover;
+`
+
+export const CardLink = styled.a`
+    color: ${Colors.purple};
+    font-family: ${Fonts.primalFF};
+    font-size: ${Fonts.sizeTN};
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration: underline;
+`
