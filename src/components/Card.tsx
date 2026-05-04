@@ -12,8 +12,8 @@ interface CarProps {
 
 export default function Card({cardNum, secDescription, cardTitle, cardImg, linkRef, linkLabel, isProject}: CarProps) {
     return (
-        <S.SectionContainer isProject={isProject}>
-            <S.ContentWrapper className="contentWrapper">
+        <S.SectionContainer>
+            <S.ContentWrapper isProject={isProject}>
                 <S.ProjectTitle>Projetos</S.ProjectTitle>
                 <S.ProjectDescription>{secDescription}</S.ProjectDescription>
             </S.ContentWrapper>

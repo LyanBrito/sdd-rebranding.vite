@@ -131,11 +131,10 @@ interface SectionProps {
     isProject?: boolean;
 }
 
-export const SectionContainer = styled.section<SectionProps>`
+export const SectionContainer = styled.section`
     display: flex;
     padding: 60px;
     justify-content: center;
-    align-items: ${props => props.isProject ? "flex-start" : "center"};
     gap: 40px;
     width: 100%;
     position: sticky;
@@ -144,11 +143,11 @@ export const SectionContainer = styled.section<SectionProps>`
 export const ContentWrapper = styled.div<SectionProps>`
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    justify-content: ${props => props.isProject ? "flex-start" : "center"};
     gap: 20px;
     width: 100%;
     background: ${Colors.yellow};
-    // height: ${props => props.isProject ? "100%" : "100%"};
+    height: -webkit-fill-available;
 `
 
 export const ProjectTitle = styled.h4`
