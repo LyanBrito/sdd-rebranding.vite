@@ -2,6 +2,7 @@ import Header from "./components/Header.tsx";
 import Button from "./components/Button.tsx";
 import * as S from "./styles/base/globalStyles.ts";
 import * as I from "./assets/icons/Icons.tsx";
+import ProjectsSection from "./components/ProjectsSection.tsx";
 
 
 export default function App() {
@@ -21,6 +22,7 @@ export default function App() {
                     style={{ borderLeft: '4px solid black', borderRight: '4px solid black' }}
                 />
             </S.HeroContent>
+            <ProjectsSection />
         </S.PageContainer>
     )
 }
