@@ -96,6 +96,7 @@ export const PageContainer = styled.div`
     width: 100%;
     flex-direction: column;
     align-items: center;
+    background-color: ${Colors.yellow};
 `
 
 export const HeroContent = styled.section`
