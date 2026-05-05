@@ -2,7 +2,7 @@ import Header from "./components/Header.tsx";
 import Button from "./components/Button.tsx";
 import * as S from "./styles/base/globalStyles.ts";
 import * as I from "./assets/icons/Icons.tsx";
-import ProjectsSection from "./components/ProjectsSection.tsx";
+import ProjectsSection from "./components/projects/ProjectsSection.tsx";
 
 
 export default function App() {
