@@ -4,22 +4,29 @@ interface CarProps {
     cardNum: string;
     cardTitle: string;
     cardImg: string;
+    cardImgP: string;
+    cardImgL: string;
     secDescription: string;
     linkRef: string;
     linkLabel: string;
     isProject?: boolean;
 }
 
-export default function Card({cardNum, secDescription, cardTitle, cardImg, linkRef, linkLabel, isProject}: CarProps) {
+export default function Card({ cardImgP, cardImgL, cardNum, secDescription, cardTitle, cardImg, linkRef, linkLabel, isProject}: CarProps) {
     return (
         <S.SectionContainer>
             <S.ContentWrapper isProject={isProject}>
-                <S.ProjectTitle>Projetos</S.ProjectTitle>
+                <S.ProjectTitle>{cardTitle}</S.ProjectTitle>
                 <S.ProjectDescription>{secDescription}</S.ProjectDescription>
+                <S.ProjectImagesWrapper>
+                    <S.ProjectImages src={cardImg} alt={cardTitle} />
+                    <S.ProjectImages src={cardImgL} alt={cardTitle}/>
+                    <S.ProjectImages src={cardImgP} alt={cardTitle}/>
+                </S.ProjectImagesWrapper>
             </S.ContentWrapper>
             <S.CardContainer>
-                 <S.CardNum>{cardNum}</S.CardNum>
-                <S.CardTitle>{cardTitle}</S.CardTitle>
+                 <S.CardNum>{cardNum}°</S.CardNum>
+                <S.CardTitle>Projeto</S.CardTitle>
                 <S.CardImage src={cardImg} alt=""/>
                 <S.CardLink href={linkRef}>{linkLabel}</S.CardLink>
             </S.CardContainer>
