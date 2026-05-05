@@ -1,17 +1,43 @@
 import styled from "styled-components";
 import {Colors, Fonts} from "../../styles/util/variables.ts";
 import {motion} from "motion/react";
+import type {Variants} from "motion";
+
 // ProjectsContainer
 
-export const SectionContainer = styled.section<{ isLast?: boolean }>`
+interface SectionProps {
+    isPast?: boolean;
+}
+
+const cardVariants: Variants = {
+    offscreen: {
+        y:0,
+    },
+    onscreen: {
+        y: 0,
+        transition: {
+            type: "spring",
+            bounce: 0.4,
+            duration: 0.8,
+        },
+    },
+}
+
+export const SectionContainer = styled(motion.section).attrs<SectionProps>({
+    initial: "offscreen",
+    whileInView: "onscreen",
+    viewport: {
+        once: true,
+        amount: 0.8
+    },
+    variants: cardVariants
+})<SectionProps>`
     display: flex;
     padding: 60px;
     align-items: center;
     gap: 40px;
     width: 100%;
     max-width: 1200px;
-    // position:${props => props.isLast ? 'relative' : 'sticky'}; 
-    // top: ${props => props.isLast ? 'unset' : '70px'};;
 `;
 export const ContentWrapper = styled.div`
     display: flex;

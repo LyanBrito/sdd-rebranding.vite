@@ -9,28 +9,35 @@ interface CarProps {
     secDescription: string;
     linkRef: string;
     linkLabel: string;
-    isLast?: boolean;
 }
 
-export default function ProjectsSection({ isLast, cardImgP, cardImgL, cardNum, secDescription, cardTitle, cardImg, linkRef, linkLabel}: CarProps) {
+export default function ProjectsSection({
+                                            cardImgP,
+                                            cardImgL,
+                                            cardNum,
+                                            secDescription,
+                                            cardTitle,
+                                            cardImg,
+                                            linkRef,
+                                            linkLabel
+                                        }: CarProps) {
     return (
-        <S.SectionContainer isLast={isLast}>
+        <S.SectionContainer>
             <S.ContentWrapper>
                 <S.ProjectTitle>{cardTitle}</S.ProjectTitle>
                 <S.ProjectDescription>{secDescription}</S.ProjectDescription>
                 <S.ProjectImagesWrapper>
-                    <S.ProjectImages src={cardImg} alt={cardTitle} />
+                    <S.ProjectImages src={cardImg} alt={cardTitle}/>
                     <S.ProjectImages src={cardImgL} alt={cardTitle}/>
                     <S.ProjectImages src={cardImgP} alt={cardTitle}/>
                 </S.ProjectImagesWrapper>
             </S.ContentWrapper>
             <S.CardContainer>
-                 <S.CardNum>{cardNum}°</S.CardNum>
+                <S.CardNum>{cardNum}°</S.CardNum>
                 <S.CardTitle>Projeto</S.CardTitle>
                 <S.CardImage src={cardImg} alt=""/>
                 <S.CardLink href={linkRef}>{linkLabel}</S.CardLink>
             </S.CardContainer>
         </S.SectionContainer>
-
     )
 }
