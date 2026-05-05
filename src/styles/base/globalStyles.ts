@@ -1,5 +1,6 @@
 import styled, {createGlobalStyle} from "styled-components";
 import {Colors, Fonts} from "../util/variables";
+import {motion} from "motion/react";
 
 export const GlobalStyle = createGlobalStyle`
     *,
@@ -134,4 +135,72 @@ export const ButtonWrapper = styled.div`
     display: flex;
     align-items: flex-start;
     gap: 30px;
+`
+
+// Footer
+
+export const FooterContainer = styled.footer`
+    display: flex;
+    padding: 15px 60px 60px 60px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: ${Colors.black};
+`
+
+export const FooterLogo = styled.span`
+    color: ${Colors.white};
+    font-family: ${Fonts.logoFF};
+    font-size: ${Fonts.footerLogo};
+    font-style: normal;
+    font-weight: 400;
+    line-height: 75%; /* 169.5px */
+`
+
+export const BackWrapepr = styled.div`
+    display: flex;
+    padding-top: 45px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 20px;
+`
+
+export const FooterNav = styled.nav`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+`
+export const FooterSubtitle = styled.h6`
+    color: ${Colors.white};
+    font-family: ${Fonts.primalFF};
+    font-size: ${Fonts.sizeXL};
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; /* 24px */
+`
+
+export const FooterNavLink = styled(motion.a).attrs(() => ({
+    whileHover: {
+        fontWeight: 600,
+    }
+}))`
+    display: flex;
+    padding: 8px 12px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: ${Colors.white};
+    font-family: ${Fonts.primalFF};
+    font-size: ${Fonts.sizeTN};
+    font-style: normal;
+    font-weight: 400;
+    width: 100%;
+`
+
+export const FooterSocialNav = styled.nav`
+    display: flex;
+    align-items: center;
+    gap: 12px;
 `
