@@ -20,7 +20,7 @@ export default function LangHandler() {
                 <S.DDLabel
                     as={motion.p}
                     whileHover={{scale: 0.98}}
-                >Change Region</S.DDLabel>
+                >Mudar Região</S.DDLabel>
                 <I.ArrowIcon/>
             </S.DropdownContainer>
             <AnimatePresence initial={false}>
