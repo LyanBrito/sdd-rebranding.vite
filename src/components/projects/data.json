@@ -1,0 +1,110 @@
+[
+  {
+    "name": "Code Trouble",
+    "images": {
+      "projectImage": "CTImages",
+      "projectLogos": "CTLogos",
+      "projectsPallet": "CTPallet"
+    },
+    "description": "Plataforma colaborativa inspirada em fóruns de dúvidas e artigos técnicos. O projeto envolveu design responsivo com a metodologia 'Atomic Design', identidade visual própria e foco na experiência do usuário, integrações e testes de usabilidade.",
+    "categories": [
+      "Aplicação Web e Mobile",
+      "Identidade Visual"
+    ]
+  },
+  {
+    "name": "Elevare",
+    "images": {
+      "projectImage": "EImages",
+      "projectLogos": "ELogos",
+      "projectsPallet": "EPallet"
+    },
+    "description": "Branding com foco na estética e na funcionalidade, especializado em design de embalagens para produtos de Medicina Tradicional Chinesa.",
+    "categories": [
+      "Identidade Visual",
+      "Mockups"
+    ]
+  },
+  {
+    "name": "Portfólio Professor Corrêa",
+    "images": {
+      "projectImage": "PPCPImages",
+      "projectLogos": "PPCPLogos",
+      "projectsPallet": "PPCPPallet"
+    },
+    "description": "Landing page criada para apresentar a identidade visual e marca pessoal do Professor Corrêa. O projeto teve como foco acessibilidade, padronização de componentes e alto desempenho na web.",
+    "categories": [
+      "Landing Page",
+      "Portfólio",
+      "Identidade Visual"
+    ]
+  },
+  {
+    "name": "Toque AI",
+    "images": {
+      "projectImage": "TAImages",
+      "projectLogos": "TALogos",
+      "projectsPallet": "TAPallet"
+    },
+    "description": "Projeto de landing page e identidade visual para o produto digital Toque AI. O foco foi unir performance, clareza de proposta de valor e escalabilidade, validando componentes reutilizáveis e usabilidade prática.",
+    "categories": [
+      "Produto Digital",
+      "Landing Page",
+      "Identidade Visual",
+      "Aplicação Web e Mobile"
+    ]
+  },
+  {
+    "name": "Clínica Sante",
+    "images": {
+      "projectImage": "SImages",
+      "projectLogos": "SLogos",
+      "projectsPallet": "SPallet"
+    },
+    "description": "Projeto de landing page para uma clínica odontológica, com foco em transmitir credibilidade, acessibilidade e confiança por meio do design, aliado a um sistema de identidade visual consistente.",
+    "categories": [
+      "Landing Page",
+      "Identidade Visual"
+    ]
+  },
+  {
+    "name": "Joy’s Gourmet",
+    "images": {
+      "projectImage": "JGImages",
+      "projectLogos": "JGLogos",
+      "projectsPallet": "JGPallet"
+    },
+    "description": "Projeto de identidade visual para a Joy’s Gourmet, especializada em catering para eventos corporativos. O trabalho teve foco em sofisticação, elegância e credibilidade, com aplicação da marca em materiais físicos, uniformes, cardápios e base visual para futuras expansões como site e produtos físicos.",
+    "categories": [
+      "Identidade Visual",
+      "Branding"
+    ]
+  },
+  {
+    "name": "Teacher Marcelli",
+    "images": {
+      "projectImage": "TMImages",
+      "projectLogos": "TMLogos",
+      "projectsPallet": "TMPallet"
+    },
+    "description": "Projeto focado na estruturação visual e estratégica da professora de inglês. Desenvolvimento da identidade visual, definição de hierarquia de conteúdo, organização da oferta e criação da landing page com foco em clareza, acolhimento e conversão.",
+    "categories": [
+      "Identidade Visual",
+      "Landing Page"
+    ]
+  },
+  {
+    "name": "CRJ Soluções",
+    "images": {
+      "projectImage": "CSImages",
+      "projectLogos": "",
+      "projectsPallet": "CSPallet"
+    },
+    "description": "Projeto de site institucional multipage para empresa de manutenção predial. Envolvedo estruturação de sitemap, definição de hierarquia de conteúdo, criação do layout responsivo (desktop e mobile), organização dos serviços com foco em condomínios e empresas, além da padronização visual para reforçar credibilidade, clareza e conversão via WhatsApp.",
+    "categories": [
+      "Web Design",
+      "UI/UX",
+      "Site Institucional"
+    ]
+  }
+]
