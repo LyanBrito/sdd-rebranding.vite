@@ -192,6 +192,7 @@ export const BannerStrip = styled.div`
     display: flex;
     padding: 0 10px 15px 10px;
     justify-content: center;
+    overflow: hidden;
     align-items: center;
     align-self: stretch;
     color: ${Colors.white};

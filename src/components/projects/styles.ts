@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import {Colors, Fonts} from "../../styles/util/variables.ts";
+import {motion} from "motion/react";
 // ProjectsSection
 
 export const SectionContainer = styled.section`
@@ -57,7 +58,12 @@ export const ProjectDescription = styled.p`
 
 // Card
 
-export const CardContainer = styled.div`
+export const CardContainer = styled(motion.div).attrs({
+    whileHover: {
+        scale: 1.04,
+        boxShadow: "3px 3px 0 0 #FFC700, 3px 3px 0 2px #000, 7px 7px 0 0 #74247A, 7px 7px 0 2px #000",
+    }
+})`
     display: flex;
     width: 415px;
     padding: 25px 30px;
@@ -68,7 +74,8 @@ export const CardContainer = styled.div`
     border-radius: 24px;
     border: 3px solid ${Colors.purple};
     background: ${Colors.yellow};
-    box-shadow: 4px 4px 0 0 ${Colors.purple};
+    box-shadow: 4px 4px 0 0 ${Colors.purple}, 0 0 0 0 'transparent', 0 0 0 0 'transparent', 0 0 0 0 'transparent';
+;
 `
 
 export const CardTitle = styled.h6`
