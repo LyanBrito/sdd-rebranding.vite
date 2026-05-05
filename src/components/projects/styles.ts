@@ -2,10 +2,6 @@ import styled from "styled-components";
 import {Colors, Fonts} from "../../styles/util/variables.ts";
 // ProjectsSection
 
-interface SectionProps {
-    isProject?: boolean;
-}
-
 export const SectionContainer = styled.section`
     display: flex;
     padding: 60px;
@@ -16,7 +12,7 @@ export const SectionContainer = styled.section`
     position: sticky;
     top: 70px;
 `;
-export const ContentWrapper = styled.div<SectionProps>`
+export const ContentWrapper = styled.div`
     display: flex;
     flex-direction: column;
     gap: 20px;
