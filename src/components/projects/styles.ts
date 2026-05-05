@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {Colors, Fonts} from "../../styles/util/variables.ts";
 import {motion} from "motion/react";
-// ProjectsSection
+// ProjectsContainer
 
 export const SectionContainer = styled.section`
     display: flex;
@@ -56,7 +56,7 @@ export const ProjectDescription = styled.p`
     width: 100%;
 `
 
-// Card
+// ProjectsSection
 
 export const CardContainer = styled(motion.div).attrs({
     whileHover: {

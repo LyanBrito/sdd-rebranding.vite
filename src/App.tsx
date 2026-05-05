@@ -2,7 +2,7 @@ import Header from "./components/Header.tsx";
 import Button from "./components/Button.tsx";
 import * as S from "./styles/base/globalStyles.ts";
 import * as I from "./assets/icons/Icons.tsx";
-import ProjectsSection from "./components/projects/ProjectsSection.tsx";
+import ProjectsContainer from "./components/projects/ProjectsContainer.tsx";
 import QuoteComponent from "./components/Carousel.tsx";
 
 export default function App() {
@@ -23,7 +23,7 @@ export default function App() {
                 />
             </S.HeroContent>
             <QuoteComponent />
-            <ProjectsSection/>
+            <ProjectsContainer/>
         </S.PageContainer>
     )
 }

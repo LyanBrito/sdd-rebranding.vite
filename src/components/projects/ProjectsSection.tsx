@@ -1,54 +1,35 @@
-import Card from "./Card.tsx";
-import PH from "../../assets/images/hero.png";
-import {useEffect, useState} from "react";
-import type {ProjectData} from "./types.ts";
-import {projectAssets} from "../../assets/images/projects/export.ts";
-import data from "./data.json";
+import * as S from "./styles.ts"
 
-export default function ProjectsSection() {
-    const [projects, setProjects] = useState<ProjectData[]>([]);
+interface CarProps {
+    cardNum: string;
+    cardTitle: string;
+    cardImg: string;
+    cardImgP: string;
+    cardImgL: string;
+    secDescription: string;
+    linkRef: string;
+    linkLabel: string;
+}
 
-    useEffect(() => {
-        // eslint-disable-next-line react-hooks/set-state-in-effect
-        setProjects(data);
-    }, []);
-
+export default function ProjectsSection({ cardImgP, cardImgL, cardNum, secDescription, cardTitle, cardImg, linkRef, linkLabel}: CarProps) {
     return (
-        <>
-            <Card
-                cardNum={"00"}
-                cardTitle={"Suporte de Domingo"}
-                cardImg={PH}
-                secDescription={"A Suporte de Domingo entrega experiências conceituais com design autoral, criando identidades únicas que rompem com o genérico. Estruturamos soluções completas com código orientado ao futuro ⌘ impulsionando conversões, reduzindo custos operacionais e proporcionando uma experiência de usuário memorável & acessível.\n"}
-                linkRef={"/"}
-                linkLabel={"link"}
-                cardImgP={PH}
-                cardImgL={PH}            />
+        <S.SectionContainer>
+            <S.ContentWrapper>
+                <S.ProjectTitle>{cardTitle}</S.ProjectTitle>
+                <S.ProjectDescription>{secDescription}</S.ProjectDescription>
+                <S.ProjectImagesWrapper>
+                    <S.ProjectImages src={cardImg} alt={cardTitle} />
+                    <S.ProjectImages src={cardImgL} alt={cardTitle}/>
+                    <S.ProjectImages src={cardImgP} alt={cardTitle}/>
+                </S.ProjectImagesWrapper>
+            </S.ContentWrapper>
+            <S.CardContainer>
+                 <S.CardNum>{cardNum}°</S.CardNum>
+                <S.CardTitle>Projeto</S.CardTitle>
+                <S.CardImage src={cardImg} alt=""/>
+                <S.CardLink href={linkRef}>{linkLabel}</S.CardLink>
+            </S.CardContainer>
+        </S.SectionContainer>
 
-            {projects.map((project, index) => {
-                const cardImage =
-                    project.images.projectImage as keyof typeof projectAssets;
-
-                const cardImagePallet =
-                    project.images.projectsPallet as keyof typeof projectAssets;
-
-                const cardImageLogos =
-                    project.images.projectLogos as keyof typeof projectAssets;
-
-
-                return (
-                    <Card
-                        key={index}
-                        cardNum={String(index + 1).padStart(2, "0")}
-                        cardTitle={project.name}
-                        cardImg={projectAssets[cardImage]}
-                        secDescription={project.description}
-                        linkRef={"/"}
-                        linkLabel={"Ver Projeto"}
-                        cardImgP={projectAssets[cardImagePallet]}
-                        cardImgL={projectAssets[cardImageLogos]}                    />
-                );
-            })}
-        </>
-    );
+    )
 }
