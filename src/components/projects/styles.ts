@@ -3,15 +3,15 @@ import {Colors, Fonts} from "../../styles/util/variables.ts";
 import {motion} from "motion/react";
 // ProjectsContainer
 
-export const SectionContainer = styled.section`
+export const SectionContainer = styled.section<{ isLast?: boolean }>`
     display: flex;
     padding: 60px;
     align-items: center;
     gap: 40px;
     width: 100%;
     max-width: 1200px;
-    position: sticky;
-    top: 70px;
+    // position:${props => props.isLast ? 'relative' : 'sticky'}; 
+    // top: ${props => props.isLast ? 'unset' : '70px'};;
 `;
 export const ContentWrapper = styled.div`
     display: flex;
@@ -75,7 +75,6 @@ export const CardContainer = styled(motion.div).attrs({
     border: 3px solid ${Colors.purple};
     background: ${Colors.yellow};
     box-shadow: 4px 4px 0 0 ${Colors.purple}, 0 0 0 0 'transparent', 0 0 0 0 'transparent', 0 0 0 0 'transparent';
-;
 `
 
 export const CardTitle = styled.h6`

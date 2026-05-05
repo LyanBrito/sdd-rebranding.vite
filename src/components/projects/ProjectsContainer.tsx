@@ -26,6 +26,7 @@ export default function ProjectsContainer() {
                 cardImgL={PH}            />
 
             {projects.map((project, index) => {
+                const isLast = index === projects.length - 1;
                 const cardImage =
                     project.images.projectImage as keyof typeof projectAssets;
 
@@ -39,6 +40,7 @@ export default function ProjectsContainer() {
                 return (
                     <ProjectsSection
                         key={index}
+                        isLast={isLast}
                         cardNum={String(index + 1).padStart(2, "0")}
                         cardTitle={project.name}
                         cardImg={projectAssets[cardImage]}
