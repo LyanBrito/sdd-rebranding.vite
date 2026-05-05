@@ -1,6 +1,9 @@
 import styled, {createGlobalStyle} from "styled-components";
 import {Colors, Fonts} from "../util/variables";
 import {motion} from "motion/react";
+import {device} from "./mixins.ts";
+import {PlaceholderPreview} from "../../assets/icons/Icons.tsx";
+
 
 export const GlobalStyle = createGlobalStyle`
     *,
@@ -108,6 +111,9 @@ export const HeroContent = styled.section`
     border-top: 4px solid ${Colors.purple};
     background: ${Colors.purple};
     border-top: 4px solid ${Colors.black};
+    @media ${device.laptop} {
+        flex-direction: column
+    }
 `
 export const ContentWrapper = styled.div`
     display: flex;
@@ -119,7 +125,19 @@ export const ContentWrapper = styled.div`
     align-items: flex-start;
     gap: 30px;
     flex: 1 0 0;
+    @media ${device.laptop} {
+        max-width: unset;
+    }
 `
+export const StyledPlaceholderPreview = styled(PlaceholderPreview)`
+    border-left: 4px solid black;
+    border-right: 4px solid black;
+
+    @media (${device.laptop}) {
+        border-top: 4px solid ${Colors.black};
+    }
+`;
+
 export const HeroTitle = styled.h1`
     color: ${Colors.white};
     font-family: ${Fonts.primalFF};
@@ -146,6 +164,10 @@ export const FooterContainer = styled.footer`
     align-items: center;
     width: 100%;
     background-color: ${Colors.black};
+    @media (${device.laptopL}) {
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
 `
 
 export const FooterLogo = styled.span`
@@ -154,16 +176,25 @@ export const FooterLogo = styled.span`
     font-size: ${Fonts.footerLogo};
     font-style: normal;
     font-weight: 400;
-    line-height: 75%; /* 169.5px */
+    line-height: 75%;
+    @media (${device.laptop}) {
+        font-size: 150px;
+    }
+    @media (${device.mobileL}) {
+        font-size: ${Fonts.size3XL};
+    }
 `
 
-export const BackWrapepr = styled.div`
+export const BackWrapper = styled.div`
     display: flex;
     padding-top: 45px;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
     gap: 20px;
+    @media (${device.laptopL}) {
+        align-items: center;
+    }
 `
 
 export const FooterNav = styled.nav`
@@ -203,4 +234,5 @@ export const FooterSocialNav = styled.nav`
     display: flex;
     align-items: center;
     gap: 12px;
+ 
 `

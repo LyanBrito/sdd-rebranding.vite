@@ -39,7 +39,7 @@ export const SectionContainer = styled(motion.section).attrs<SectionProps>({
     gap: 40px;
     width: 100%;
     max-width: 1200px;
-    @media ${device.tablet} {
+    @media (${device.laptop}) {
         flex-direction: column;
     }
 `;
@@ -105,7 +105,7 @@ export const CardContainer = styled(motion.div).attrs({
     border: 3px solid ${Colors.purple};
     background: ${Colors.yellow};
     box-shadow: 4px 4px 0 0 ${Colors.purple}, 0 0 0 0 'transparent', 0 0 0 0 'transparent', 0 0 0 0 'transparent';
-    @media ${device.tablet} {
+    @media (${device.laptop}) {
         width: 100%;
     }
 `

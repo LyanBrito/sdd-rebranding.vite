@@ -19,30 +19,28 @@ export default function App() {
                         <Button ref="/" hasIcon label="Solicitar Orçamento"/>
                     </S.ButtonWrapper>
                 </S.ContentWrapper>
-                <I.PlaceholderPreview
-                    style={{borderLeft: '4px solid black', borderRight: '4px solid black'}}
-                />
+                <S.StyledPlaceholderPreview/>
             </S.HeroContent>
             <QuoteComponent/>
             <ProjectsContainer/>
             <ServicesSection/>
             <S.FooterContainer>
                 <S.FooterLogo>Suporte de Domingo</S.FooterLogo>
-                <S.BackWrapepr className="backWrapper">
+                <S.BackWrapper className="backWrapper">
                     <S.FooterSubtitle>Voltar na Página</S.FooterSubtitle>
                     <S.FooterNav>
-                        <S.FooterNavLink href="/">Inĩcio</S.FooterNavLink>
+                        <S.FooterNavLink href="/">Início</S.FooterNavLink>
                         <S.FooterNavLink href="/">Produtos</S.FooterNavLink>
                         <S.FooterNavLink href="/">Serviços</S.FooterNavLink>
                         <S.FooterNavLink href="/">Contatos</S.FooterNavLink>
                     </S.FooterNav>
-                    <Button hasIcon label="Solicitar Orçamento" ref="/" />
+                    <Button hasIcon label="Solicitar Orçamento" ref="/"/>
                     <S.FooterSocialNav className="socialNav">
-                        <I.ArrowIcon />
-                        <I.ArrowIcon />
-                        <I.ArrowIcon />
+                        <I.ArrowIcon/>
+                        <I.ArrowIcon/>
+                        <I.ArrowIcon/>
                     </S.FooterSocialNav>
-                </S.BackWrapepr>
+                </S.BackWrapper>
             </S.FooterContainer>
         </S.PageContainer>
     )
