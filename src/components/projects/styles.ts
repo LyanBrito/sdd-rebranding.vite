@@ -2,6 +2,7 @@ import styled from "styled-components";
 import {Colors, Fonts} from "../../styles/util/variables.ts";
 import {motion} from "motion/react";
 import type {Variants} from "motion";
+import {device} from "../../styles/base/mixins.ts";
 
 // ProjectsContainer
 
@@ -38,6 +39,9 @@ export const SectionContainer = styled(motion.section).attrs<SectionProps>({
     gap: 40px;
     width: 100%;
     max-width: 1200px;
+    @media ${device.tablet} {
+        flex-direction: column;
+    }
 `;
 export const ContentWrapper = styled.div`
     display: flex;
@@ -101,6 +105,9 @@ export const CardContainer = styled(motion.div).attrs({
     border: 3px solid ${Colors.purple};
     background: ${Colors.yellow};
     box-shadow: 4px 4px 0 0 ${Colors.purple}, 0 0 0 0 'transparent', 0 0 0 0 'transparent', 0 0 0 0 'transparent';
+    @media ${device.tablet} {
+        width: 100%;
+    }
 `
 
 export const CardTitle = styled.h6`
