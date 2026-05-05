@@ -4,6 +4,7 @@ import * as S from "./styles/base/globalStyles.ts";
 import * as I from "./assets/icons/Icons.tsx";
 import ProjectsContainer from "./components/projects/ProjectsContainer.tsx";
 import QuoteComponent from "./components/Carousel.tsx";
+import ServicesSection from "./components/services/ServicesSection.tsx";
 
 export default function App() {
 
@@ -24,6 +25,7 @@ export default function App() {
             </S.HeroContent>
             <QuoteComponent />
             <ProjectsContainer/>
+            <ServicesSection />
         </S.PageContainer>
     )
 }
