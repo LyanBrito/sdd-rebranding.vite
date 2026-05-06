@@ -40,7 +40,7 @@ export const NavContainer = styled(motion.nav)`
     display: flex;
     height: 64px;
     align-items: center;
-    width: 17.96875%;
+    width: 17.96875%;;
     gap: 3px;
 
     @media (max-width: 768px) {
@@ -205,18 +205,18 @@ export const QuoteText = styled.h3`
     @media ${device.tablet} {
         font-size: ${Fonts.sizeSM};
     }
+`
+export const QuoteSpan =   styled.span`{
+    font-weight: 800;
+    color: ${Colors.black};
+    text-align: center;
+    font-family: ${Fonts.primalFF};
+    font-size: ${Fonts.sizeLG};
+    font-style: normal;
+    @media ${device.tablet} {
+        font-size: ${Fonts.sizeSM};
 
-    span {
-        font-weight: 800;
-        color: ${Colors.black};
-        text-align: center;
-        font-family: ${Fonts.primalFF};
-        font-size: ${Fonts.sizeLG};
-        font-style: normal;
-        @media ${device.tablet} {
-            font-size: ${Fonts.sizeSM};
-
-        }
+    }
 `
 export const QuoteSimble = styled.span`
     color: ${Colors.white};

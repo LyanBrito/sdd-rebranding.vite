@@ -28,7 +28,7 @@ export default function QuoteComponent() {
             <S.QuoteSection bgImg={BackgroundPattern}>
                 <S.QuoteSimble>"</S.QuoteSimble>
                 <S.QuoteText>Descubra tudo o que podemos oferecer para
-                    sua <span>transformação digital, e conectar você ao futuro.</span>
+                    sua <S.QuoteSpan>transformação digital, e conectar você ao futuro.</S.QuoteSpan>
                 </S.QuoteText>
                 <S.QuoteSimble>"</S.QuoteSimble>
             </S.QuoteSection>
