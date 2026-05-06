@@ -1,5 +1,4 @@
 import ProjectsSection from "./ProjectsSection.tsx";
-import PH from "../../assets/images/hero.png";
 import {useEffect, useState} from "react";
 import type {ProjectData} from "./types.ts";
 import {projectAssets} from "../../assets/images/projects/export.ts";
@@ -18,12 +17,12 @@ export default function ProjectsContainer() {
             <ProjectsSection
                 cardNum={"00"}
                 cardTitle={"Suporte de Domingo"}
-                cardImg={PH}
+                cardImg={projectAssets.SDDImages}
                 secDescription={"A Suporte de Domingo entrega experiências conceituais com design autoral, criando identidades únicas que rompem com o genérico. Estruturamos soluções completas com código orientado ao futuro ⌘ impulsionando conversões, reduzindo custos operacionais e proporcionando uma experiência de usuário memorável & acessível.\n"}
                 linkRef={"/"}
                 linkLabel={"link"}
-                cardImgP={PH}
-                cardImgL={PH}/>
+                cardImgP={projectAssets.SDDPrev2}
+                cardImgL={projectAssets.SDDPallet}/>
 
             {projects.map((project, index) => {
                 const cardImage =

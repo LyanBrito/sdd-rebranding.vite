@@ -29,6 +29,12 @@ import EI from "./EPI.jpg";
 import EP from "./EP.jpg";
 import EL from "./EL.jpg";
 
+import SDDI from "./SDDI.jpg";
+import SDDL from "./SDDL.jpg";
+import SDDP from "./SDDP.jpg";
+import SDDP1 from "./SDDP1.jpg";
+import SDDP2 from "./SDDP2.jpg";
+
 export const projectAssets = {
     CTImages: CTI,
     CTPallet: CTP,
@@ -60,5 +66,11 @@ export const projectAssets = {
 
     EImages: EI,
     EPallet: EP,
-    ELogos: EL
+    ELogos: EL,
+
+    SDDImages: SDDI,
+    SDDLogos: SDDL,
+    SDDPallet: SDDP,
+    SDDPrev1: SDDP1,
+    SDDPrev2: SDDP2
 };
