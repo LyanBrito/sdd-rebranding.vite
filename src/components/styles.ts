@@ -1,6 +1,7 @@
 import styled, {keyframes} from "styled-components";
 import {Colors, Fonts} from "../styles/util/variables.ts";
 import {motion} from "motion/react";
+import {device} from "../styles/base/mixins.ts";
 
 // Button
 interface ButtonProps {
@@ -35,13 +36,26 @@ interface NavProps {
     actualPage?: boolean;
 }
 
-export const NavContainer = styled.nav`
+export const NavContainer = styled(motion.nav)`
     display: flex;
     height: 64px;
     align-items: center;
     width: 17.96875%;
     gap: 3px;
-`
+
+    @media (max-width: 768px) {
+        background-color: ${Colors.white};
+        border: 4px solid ${Colors.black};
+        padding: 8px 12px;
+        gap: 8px;
+        height: fit-content;
+        width: fit-content;
+        flex-direction: column;
+        right: 60px;
+        top: 64px;
+        position: absolute;
+    }
+`;
 
 export const NavLink = styled(motion.a).attrs<NavProps>(() => ({
 //     animation props
@@ -74,13 +88,33 @@ export const HeaderContainer = styled.header`
     width: 100%;
     background: ${Colors.white};
 `
+export const HamburguerMenu = styled.button`
+    display: none;
+    height: 64px;
+    align-items: center;
 
+    @media (max-width: 768px) {
+        display: flex;
+    }
+`;
 // LangHandler
-export const DropdownContainer = styled.div`
+export const DropdownContainer = styled(motion.div)`
     display: flex;
     align-items: center;
     gap: 2px;
     cursor: pointer;
+
+    @media (max-width: 768px) {
+        position: absolute;
+        background-color: ${Colors.white};
+        border: 4px solid ${Colors.black};
+        padding: 8px 12px;
+        gap: 8px;
+        height: fit-content;
+        width: fit-content;
+        right: 60px;
+        top: 210px;
+    }
 `
 export const DDLabel = styled.p`
     font-family: ${Fonts.primalFF};
@@ -156,6 +190,8 @@ export const QuoteSection = styled.div<QuoteProps>`
     background-image: url(${props => props.bgImg});
     background-position: center;
     align-items: center;
+    @media ${device.tablet} {
+        flex-direction: column;
 `
 
 export const QuoteText = styled.h3`
@@ -166,6 +202,9 @@ export const QuoteText = styled.h3`
     font-style: normal;
     max-width: 926px;
     font-weight: 700;
+    @media ${device.tablet} {
+        font-size: ${Fonts.sizeSM};
+    }
 
     span {
         font-weight: 800;
@@ -174,7 +213,10 @@ export const QuoteText = styled.h3`
         font-family: ${Fonts.primalFF};
         font-size: ${Fonts.sizeLG};
         font-style: normal;
-    }
+        @media ${device.tablet} {
+            font-size: ${Fonts.sizeSM};
+
+        }
 `
 export const QuoteSimble = styled.span`
     color: ${Colors.white};

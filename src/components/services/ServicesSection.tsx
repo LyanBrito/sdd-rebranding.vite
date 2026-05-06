@@ -6,7 +6,9 @@ export default function ServicesSection() {
     return (
         <S.SectionContainer>
             <S.SectionTitle>Servçios</S.SectionTitle>
-            <S.SectionText>dfghjkl;</S.SectionText>
+            <S.SectionText>Do branding à experiência digital ✶
+                Soluções integradas em design, software, automação e capacitação para gerar valor e impulsionar
+                resultados.</S.SectionText>
             <S.Grid>
                 {servicesData.map((service) => (
                     <ServiceCard

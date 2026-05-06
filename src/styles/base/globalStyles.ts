@@ -127,6 +127,8 @@ export const ContentWrapper = styled.div`
     flex: 1 0 0;
     @media ${device.laptop} {
         max-width: unset;
+        padding: 30px;
+        align-items: center;
     }
 `
 export const StyledPlaceholderPreview = styled(PlaceholderPreview)`
@@ -147,12 +149,19 @@ export const HeroTitle = styled.h1`
     line-height: normal;
     letter-spacing: -0.64px;
     width: 100%;
+    @media ${device.mobileL} {
+        font-size: ${Fonts.sizeXL};
+    }
 `
 
 export const ButtonWrapper = styled.div`
     display: flex;
     align-items: flex-start;
     gap: 30px;
+    @media ${device.mobileL} {
+        flex-direction: column;
+        align-items: center;
+    }
 `
 
 // Footer

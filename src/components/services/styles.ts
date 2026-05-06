@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import {Colors, Fonts} from "../../styles/util/variables.ts";
 import {motion} from "motion/react";
+import {device} from "../../styles/base/mixins.ts";
 
 // Card
 export const CardContainer = styled(motion.div).attrs({
@@ -20,6 +21,7 @@ export const CardContainer = styled(motion.div).attrs({
     border: 3px solid ${Colors.black};
     background-color: ${Colors.white} ;
     box-shadow: 4px 4px 0 0 ${Colors.purple}, 0 0 0 0 'transparent', 0 0 0 0 'transparent', 0 0 0 0 'transparent';
+
 `
 export const CardBody = styled.div`
     display: flex;
@@ -64,10 +66,14 @@ export const CardText = styled.p`
 export const SectionContainer = styled(motion.div)`
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 100%;
     padding: 60px;
     gap: 40px;
     background-color: ${Colors.purple};
+    @media ${device.tablet} {
+        padding: 30px;
+    ;
 `
 
 export const Grid = styled.div`
@@ -76,6 +82,13 @@ export const Grid = styled.div`
     gap: 20px;
     padding: 40px;
     width: 100%;
+    max-width: 1200px;
+    @media ${device.tablet} {
+        max-width: unset;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    ;
 `;
 
 export const SectionTitle = styled.h4`
@@ -85,6 +98,8 @@ export const SectionTitle = styled.h4`
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    max-width: 1200px;
+    width: 100%;
 `
 
 export const SectionText = styled.p`
@@ -96,5 +111,6 @@ export const SectionText = styled.p`
     font-weight: 400;
     line-height: normal;
     width: 100%;
+    max-width: 1200px;
 
 `

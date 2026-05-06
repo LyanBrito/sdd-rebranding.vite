@@ -38,9 +38,10 @@ export const SectionContainer = styled(motion.section).attrs<SectionProps>({
     align-items: center;
     gap: 40px;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1320px;
     @media (${device.laptop}) {
         flex-direction: column;
+        padding: 30px;
     }
 `;
 export const ContentWrapper = styled.div`

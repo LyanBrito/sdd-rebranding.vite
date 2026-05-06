@@ -4,14 +4,23 @@ import * as I from "../assets/icons/Icons.tsx";
 import * as S from "./styles.ts";
 import {useState} from "react";
 import {AnimatePresence, motion} from "motion/react"
+import type {Variants} from "motion";
 
-export default function LangHandler() {
+interface LangProps {
+    isContainerVisible: boolean;
+    menuVariantes: Variants;
+}
+
+export default function LangHandler({isContainerVisible, menuVariantes}: LangProps) {
     const [isVisible, setIsVisible] = useState(false)
 
     return (
         <>
             <S.DropdownContainer
-                as={motion.div}
+                initial={false}
+                animate={isContainerVisible ? "closed" : "open"}
+                variants={menuVariantes}
+                style={{ pointerEvents: isContainerVisible ? "none" : "auto" }}
                 onClick={() => setIsVisible(!isVisible)}
                 whileTap={{scale: 0.98}}
             >
@@ -23,7 +32,7 @@ export default function LangHandler() {
                 >Mudar Região</S.DDLabel>
                 <I.ArrowIcon/>
             </S.DropdownContainer>
-            <AnimatePresence initial={false}>
+            <AnimatePresence initial={true}>
                 {isVisible ?
                     <S.LangOptionsWrapper
                         as={motion.div}
