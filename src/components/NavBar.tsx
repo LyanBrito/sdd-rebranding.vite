@@ -11,9 +11,9 @@ export default function NavBar({page, menuVariants, isVisible}: NavBarProps) {
     return (
         <S.NavContainer
             initial={false}
-            animate={isVisible ? "closed" : "open"}
+            animate={isVisible ? "open" : "closed"}
             variants={menuVariants}
-            style={{pointerEvents: isVisible ? "none" : "auto"}}>
+            style={{pointerEvents: isVisible ? "auto" : "none"}}>
             <S.NavLink
                 actualPage={page === "/"}
                 href="/">Inicio</S.NavLink>

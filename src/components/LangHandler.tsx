@@ -18,9 +18,9 @@ export default function LangHandler({isContainerVisible, menuVariantes}: LangPro
         <>
             <S.DropdownContainer
                 initial={false}
-                animate={isContainerVisible ? "closed" : "open"}
+                animate={isContainerVisible ? "open" : "closed"}
                 variants={menuVariantes}
-                style={{ pointerEvents: isContainerVisible ? "none" : "auto" }}
+                style={{ pointerEvents: isContainerVisible ? "auto" : "none" }}
                 onClick={() => setIsVisible(!isVisible)}
                 whileTap={{scale: 0.98}}
             >
