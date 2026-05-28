@@ -168,6 +168,7 @@ export const ButtonWrapper = styled.div`
 
 export const FooterContainer = styled.footer`
     display: flex;
+    position: sticky;
     padding: 15px 60px 60px 60px;
     justify-content: space-between;
     align-items: center;

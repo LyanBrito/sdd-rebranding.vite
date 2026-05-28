@@ -35,6 +35,9 @@ export const SectionContainer = styled(motion.section).attrs<SectionProps>({
 })<SectionProps>`
     display: flex;
     padding: 60px;
+    position: sticky;
+    top: 80px;
+    height: 610px;
     align-items: center;
     gap: 40px;
     width: 100%;

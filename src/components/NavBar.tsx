@@ -16,13 +16,18 @@ export default function NavBar({page, menuVariants, isVisible}: NavBarProps) {
             style={{pointerEvents: isVisible ? "auto" : "none"}}>
             <S.NavLink
                 actualPage={page === "/"}
-                href="/">Inicio</S.NavLink>
+                href="/"
+            >Inicio</S.NavLink>
             <S.NavLink
                 actualPage={page === "/PortfolioPage"}
-                href="/PortfolioPage">Portfolio</S.NavLink>
+                // href="/PortfolioPage"
+                href="#PortfolioSection"
+            >Portfolio</S.NavLink>
             <S.NavLink
-                actualPage={page === "/ContactsPage"}
-                href="/ContactsPage">Contatos</S.NavLink>
+                actualPage={page === "/ServicesPage"}
+                // href="/ContactsPage"
+                href="#ServicesSection"
+            >Serviços</S.NavLink>
         </S.NavContainer>
     )
 }

@@ -65,6 +65,7 @@ export const CardText = styled.p`
 // Section
 export const SectionContainer = styled(motion.div)`
     display: flex;
+    position: sticky;
     flex-direction: column;
     align-items: center;
     width: 100%;

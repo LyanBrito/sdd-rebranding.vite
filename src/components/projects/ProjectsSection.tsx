@@ -22,7 +22,7 @@ export default function ProjectsSection({
                                             linkLabel
                                         }: CarProps) {
     return (
-        <S.SectionContainer>
+        <S.SectionContainer id="PortfolioSection">
             <S.ContentWrapper>
                 <S.ProjectTitle>{cardTitle}</S.ProjectTitle>
                 <S.ProjectDescription>{secDescription}</S.ProjectDescription>
